@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ناب الکترونیک | در حال راه‌اندازی</title>
+    
+    <!-- قرار دادن لوگو در تب بالای مرورگر (Favicon) -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+        }
+
+        body {
+            /* پالت رنگی سورمه‌ای تیره دقیقاً هماهنگ با پس‌زمینه لوگو */
+            background: linear-gradient(135deg, #0b1528 0%, #152544 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* جلوه تاروپود ظریف الکترونیکی در پس‌زمینه */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.4;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            padding: 2.5rem;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .logo-container {
+            margin-bottom: 2rem;
+            display: inline-block;
+            position: relative;
+        }
+
+        /* تبدیل لوگو به دایره کامل و اضافه کردن افکت درخشندگی */
+        .logo-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover; /* برای حفظ ابعاد عکس و زوم مناسب در مرکز */
+            border-radius: 50%; /* گرد کردن کامل */
+            border: 3px solid rgba(255, 255, 255, 0.2); /* حاشیه شیک دور دایره */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            animation: pulse-glow 3s infinite ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: #ffffff; /* رنگ سفید برای کلمه فروشگاه */
+            text-shadow: 0 2px 15px rgba(255, 255, 255, 0.2);
+            letter-spacing: -0.5px;
+        }
+
+        /* رنگ متمایز و درخشان برای نام برند بدون خط زیرین */
+        .highlight {
+            color: #00f2fe; /* رنگ آبی فیروزه‌ای الکترونیکی جذاب */
+            text-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
+            font-weight: 900;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            line-height: 1.9;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        /* نشان وضعیت هماهنگ با رنگ سفید و تیره */
+        .badge {
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* بخش راه‌های ارتباطی */
+        .contact-info {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            align-items: center;
+        }
+
+        .contact-item {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 400;
+        }
+
+        .contact-item:hover {
+            color: #00f2fe;
+            text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
+        }
+
+        /* افکت پالس نوری ملایم برای زنده بودن صفحه */
+        @keyframes pulse-glow {
+            0%, 100% { 
+                transform: scale(1); 
+                border-color: rgba(255, 255, 255, 0.2);
+                box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            }
+            50% { 
+                transform: scale(1.04); 
+                border-color: rgba(255, 255, 255, 0.5);
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.9rem; }
+            p { font-size: 1rem; }
+            .logo-img { 
+                width: 120px; 
+                height: 120px; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- لوگوی اختصاصی ناب الکترونیک (دایره‌ای شده) -->
+        <div class="logo-container">
+            <!-- تصویر لوگوی ارسالی شما با نام logo.png -->
+            <img src="logo.png" alt="ناب الکترونیک" class="logo-img">
+        </div>
+
+        <div>
+            <span class="badge">مهندسان ما مشغول کار هستند</span>
+        </div>
+        
+        <!-- تفاوت رنگ فروشگاه با ناب الکترونیک بدون خط زیرین -->
+        <h1>فروشگاه <span class="highlight">ناب الکترونیک</span></h1>
+        
+        <p>
+            در حال برنامه‌نویسی و آماده‌سازی یک تجربه خرید بی‌نظیر برای شما هستیم. به‌زودی با دست پر بازخواهیم گشت!
+        </p>
+
+        <!-- راه‌های ارتباطی -->
+        <div class="contact-info">
+            <span style="color: #64748b; font-size: 0.85rem;">پل‌های ارتباطی موقت با ما:</span>
+            <a href="mailto:electronicnab@gmail.com" class="contact-item">ایمیل: electronicnab@gmail.com</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
