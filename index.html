@@ -1,188 +1,2475 @@
-<!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ناب الکترونیک | در حال راه‌اندازی</title>
-    
-    <!-- قرار دادن لوگو در تب بالای مرورگر (Favicon) -->
-    <link rel="icon" type="image/png" href="logo.png">
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ناب الکترونیک | فروشگاه لوازم الکترونیکی</title>
+  <link src="tailwind.css" rel="stylesheet">
+  <style>
+    .fade-in {
+      animation: fadeIn 0.3s ease-in-out;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Vazirmatn', Tahoma, sans-serif;
-        }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
 
-        body {
-            /* پالت رنگی سورمه‌ای تیره دقیقاً هماهنگ با پس‌زمینه لوگو */
-            background: linear-gradient(135deg, #0b1528 0%, #152544 100%);
-            color: #f8fafc;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-            position: relative;
-        }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-        /* جلوه تاروپود ظریف الکترونیکی در پس‌زمینه */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-            background-size: 40px 40px;
-            opacity: 0.4;
-            z-index: 1;
-        }
+    .slide-up {
+      animation: slideUp 0.3s ease-out;
+    }
 
-        .container {
-            position: relative;
-            z-index: 2;
-            padding: 2.5rem;
-            max-width: 600px;
-            width: 100%;
-        }
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+      }
 
-        .logo-container {
-            margin-bottom: 2rem;
-            display: inline-block;
-            position: relative;
-        }
+      to {
+        transform: translateY(0);
+      }
+    }
 
-        /* تبدیل لوگو به دایره کامل و اضافه کردن افکت درخشندگی */
-        .logo-img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover; /* برای حفظ ابعاد عکس و زوم مناسب در مرکز */
-            border-radius: 50%; /* گرد کردن کامل */
-            border: 3px solid rgba(255, 255, 255, 0.2); /* حاشیه شیک دور دایره */
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-            animation: pulse-glow 3s infinite ease-in-out;
-        }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
 
-        h1 {
-            font-size: 2.6rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            color: #ffffff; /* رنگ سفید برای کلمه فروشگاه */
-            text-shadow: 0 2px 15px rgba(255, 255, 255, 0.2);
-            letter-spacing: -0.5px;
-        }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
 
-        /* رنگ متمایز و درخشان برای نام برند بدون خط زیرین */
-        .highlight {
-            color: #00f2fe; /* رنگ آبی فیروزه‌ای الکترونیکی جذاب */
-            text-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
-            font-weight: 900;
-        }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+  <style>
+    *,
+    ::before,
+    ::after {
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-rotate: 0;
+      --tw-skew-x: 0;
+      --tw-skew-y: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-pan-x: ;
+      --tw-pan-y: ;
+      --tw-pinch-zoom: ;
+      --tw-scroll-snap-strictness: proximity;
+      --tw-gradient-from-position: ;
+      --tw-gradient-via-position: ;
+      --tw-gradient-to-position: ;
+      --tw-ordinal: ;
+      --tw-slashed-zero: ;
+      --tw-numeric-figure: ;
+      --tw-numeric-spacing: ;
+      --tw-numeric-fraction: ;
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: rgb(59 130 246 / 0.5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-colored: 0 0 #0000;
+      --tw-blur: ;
+      --tw-brightness: ;
+      --tw-contrast: ;
+      --tw-grayscale: ;
+      --tw-hue-rotate: ;
+      --tw-invert: ;
+      --tw-saturate: ;
+      --tw-sepia: ;
+      --tw-drop-shadow: ;
+      --tw-backdrop-blur: ;
+      --tw-backdrop-brightness: ;
+      --tw-backdrop-contrast: ;
+      --tw-backdrop-grayscale: ;
+      --tw-backdrop-hue-rotate: ;
+      --tw-backdrop-invert: ;
+      --tw-backdrop-opacity: ;
+      --tw-backdrop-saturate: ;
+      --tw-backdrop-sepia: ;
+      --tw-contain-size: ;
+      --tw-contain-layout: ;
+      --tw-contain-paint: ;
+      --tw-contain-style:
+    }
 
-        p {
-            font-size: 1.1rem;
-            color: #94a3b8;
-            line-height: 1.9;
-            margin-bottom: 2.5rem;
-            font-weight: 300;
-        }
+    ::backdrop {
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-rotate: 0;
+      --tw-skew-x: 0;
+      --tw-skew-y: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-pan-x: ;
+      --tw-pan-y: ;
+      --tw-pinch-zoom: ;
+      --tw-scroll-snap-strictness: proximity;
+      --tw-gradient-from-position: ;
+      --tw-gradient-via-position: ;
+      --tw-gradient-to-position: ;
+      --tw-ordinal: ;
+      --tw-slashed-zero: ;
+      --tw-numeric-figure: ;
+      --tw-numeric-spacing: ;
+      --tw-numeric-fraction: ;
+      --tw-ring-inset: ;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-color: rgb(59 130 246 / 0.5);
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-colored: 0 0 #0000;
+      --tw-blur: ;
+      --tw-brightness: ;
+      --tw-contrast: ;
+      --tw-grayscale: ;
+      --tw-hue-rotate: ;
+      --tw-invert: ;
+      --tw-saturate: ;
+      --tw-sepia: ;
+      --tw-drop-shadow: ;
+      --tw-backdrop-blur: ;
+      --tw-backdrop-brightness: ;
+      --tw-backdrop-contrast: ;
+      --tw-backdrop-grayscale: ;
+      --tw-backdrop-hue-rotate: ;
+      --tw-backdrop-invert: ;
+      --tw-backdrop-opacity: ;
+      --tw-backdrop-saturate: ;
+      --tw-backdrop-sepia: ;
+      --tw-contain-size: ;
+      --tw-contain-layout: ;
+      --tw-contain-paint: ;
+      --tw-contain-style:
+    }
 
-        /* نشان وضعیت هماهنگ با رنگ سفید و تیره */
-        .badge {
-            background-color: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #ffffff;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
+    *,
+    ::after,
+    ::before {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+      border-color: #e5e7eb
+    }
 
-        /* بخش راه‌های ارتباطی */
-        .contact-info {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-            align-items: center;
-        }
+    ::after,
+    ::before {
+      --tw-content: ''
+    }
 
-        .contact-item {
-            font-size: 0.95rem;
-            color: #cbd5e1;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-weight: 400;
-        }
+    :host,
+    html {
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+      -moz-tab-size: 4;
+      tab-size: 4;
+      font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-feature-settings: normal;
+      font-variation-settings: normal;
+      -webkit-tap-highlight-color: transparent
+    }
 
-        .contact-item:hover {
-            color: #00f2fe;
-            text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
-        }
+    body {
+      margin: 0;
+      line-height: inherit
+    }
 
-        /* افکت پالس نوری ملایم برای زنده بودن صفحه */
-        @keyframes pulse-glow {
-            0%, 100% { 
-                transform: scale(1); 
-                border-color: rgba(255, 255, 255, 0.2);
-                box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-            }
-            50% { 
-                transform: scale(1.04); 
-                border-color: rgba(255, 255, 255, 0.5);
-                box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-            }
-        }
+    hr {
+      height: 0;
+      color: inherit;
+      border-top-width: 1px
+    }
 
-        @media (max-width: 480px) {
-            h1 { font-size: 1.9rem; }
-            p { font-size: 1rem; }
-            .logo-img { 
-                width: 120px; 
-                height: 120px; 
-            }
-        }
-    </style>
+    abbr:where([title]) {
+      -webkit-text-decoration: underline dotted;
+      text-decoration: underline dotted
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: inherit;
+      font-weight: inherit
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit
+    }
+
+    b,
+    strong {
+      font-weight: bolder
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-feature-settings: normal;
+      font-variation-settings: normal;
+      font-size: 1em
+    }
+
+    small {
+      font-size: 80%
+    }
+
+    sub,
+    sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline
+    }
+
+    sub {
+      bottom: -.25em
+    }
+
+    sup {
+      top: -.5em
+    }
+
+    table {
+      text-indent: 0;
+      border-color: inherit;
+      border-collapse: collapse
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-feature-settings: inherit;
+      font-variation-settings: inherit;
+      font-size: 100%;
+      font-weight: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+      color: inherit;
+      margin: 0;
+      padding: 0
+    }
+
+    button,
+    select {
+      text-transform: none
+    }
+
+    button,
+    input:where([type=button]),
+    input:where([type=reset]),
+    input:where([type=submit]) {
+      -webkit-appearance: button;
+      background-color: transparent;
+      background-image: none
+    }
+
+    :-moz-focusring {
+      outline: auto
+    }
+
+    :-moz-ui-invalid {
+      box-shadow: none
+    }
+
+    progress {
+      vertical-align: baseline
+    }
+
+    ::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+      height: auto
+    }
+
+    [type=search] {
+      -webkit-appearance: textfield;
+      outline-offset: -2px
+    }
+
+    ::-webkit-search-decoration {
+      -webkit-appearance: none
+    }
+
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button;
+      font: inherit
+    }
+
+    summary {
+      display: list-item
+    }
+
+    blockquote,
+    dd,
+    dl,
+    figure,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    hr,
+    p,
+    pre {
+      margin: 0
+    }
+
+    fieldset {
+      margin: 0;
+      padding: 0
+    }
+
+    legend {
+      padding: 0
+    }
+
+    menu,
+    ol,
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0
+    }
+
+    dialog {
+      padding: 0
+    }
+
+    textarea {
+      resize: vertical
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      opacity: 1;
+      color: #9ca3af
+    }
+
+    [role=button],
+    button {
+      cursor: pointer
+    }
+
+    :disabled {
+      cursor: default
+    }
+
+    audio,
+    canvas,
+    embed,
+    iframe,
+    img,
+    object,
+    svg,
+    video {
+      display: block;
+      vertical-align: middle
+    }
+
+    img,
+    video {
+      max-width: 100%;
+      height: auto
+    }
+
+    [hidden]:where(:not([hidden=until-found])) {
+      display: none
+    }
+
+    .absolute {
+      position: absolute
+    }
+
+    .relative {
+      position: relative
+    }
+
+    .sticky {
+      position: sticky
+    }
+
+    .inset-0 {
+      inset: 0px
+    }
+
+    .right-0 {
+      right: 0px
+    }
+
+    .top-0 {
+      top: 0px
+    }
+
+    .left-2 {
+      left: 0.5rem
+    }
+
+    .right-2 {
+      right: 0.5rem
+    }
+
+    .top-2 {
+      top: 0.5rem
+    }
+
+    .z-50 {
+      z-index: 50
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .mb-2 {
+      margin-bottom: 0.5rem
+    }
+
+    .mt-1 {
+      margin-top: 0.25rem
+    }
+
+    .mt-12 {
+      margin-top: 3rem
+    }
+
+    .mt-2 {
+      margin-top: 0.5rem
+    }
+
+    .mt-6 {
+      margin-top: 1.5rem
+    }
+
+    .mb-1 {
+      margin-bottom: 0.25rem
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem
+    }
+
+    .mb-6 {
+      margin-bottom: 1.5rem
+    }
+
+    .mt-8 {
+      margin-top: 2rem
+    }
+
+    .mt-auto {
+      margin-top: auto
+    }
+
+    .line-clamp-2 {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2
+    }
+
+    .flex {
+      display: flex
+    }
+
+    .grid {
+      display: grid
+    }
+
+    .hidden {
+      display: none
+    }
+
+    .h-16 {
+      height: 4rem
+    }
+
+    .h-5 {
+      height: 1.25rem
+    }
+
+    .h-6 {
+      height: 1.5rem
+    }
+
+    .h-8 {
+      height: 2rem
+    }
+
+    .h-32 {
+      height: 8rem
+    }
+
+    .h-4 {
+      height: 1rem
+    }
+
+    .h-40 {
+      height: 10rem
+    }
+
+    .h-52 {
+      height: 13rem
+    }
+
+    .min-h-screen {
+      min-height: 100vh
+    }
+
+    .w-5 {
+      width: 1.25rem
+    }
+
+    .w-6 {
+      width: 1.5rem
+    }
+
+    .w-8 {
+      width: 2rem
+    }
+
+    .w-32 {
+      width: 8rem
+    }
+
+    .w-4 {
+      width: 1rem
+    }
+
+    .w-full {
+      width: 100%
+    }
+
+    .max-w-7xl {
+      max-width: 80rem
+    }
+
+    .flex-1 {
+      flex: 1 1 0%
+    }
+
+    .cursor-pointer {
+      cursor: pointer
+    }
+
+    .grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr))
+    }
+
+    .flex-col {
+      flex-direction: column
+    }
+
+    .items-center {
+      align-items: center
+    }
+
+    .justify-center {
+      justify-content: center
+    }
+
+    .justify-between {
+      justify-content: space-between
+    }
+
+    .gap-2 {
+      gap: 0.5rem
+    }
+
+    .gap-4 {
+      gap: 1rem
+    }
+
+    .gap-6 {
+      gap: 1.5rem
+    }
+
+    .gap-8 {
+      gap: 2rem
+    }
+
+    .gap-3 {
+      gap: 0.75rem
+    }
+
+    .space-y-1> :not([hidden])~ :not([hidden]) {
+      --tw-space-y-reverse: 0;
+      margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+      margin-bottom: calc(0.25rem * var(--tw-space-y-reverse))
+    }
+
+    .overflow-hidden {
+      overflow: hidden
+    }
+
+    .overflow-x-auto {
+      overflow-x: auto
+    }
+
+    .whitespace-nowrap {
+      white-space: nowrap
+    }
+
+    .rounded-full {
+      border-radius: 9999px
+    }
+
+    .rounded-2xl {
+      border-radius: 1rem
+    }
+
+    .rounded-lg {
+      border-radius: 0.5rem
+    }
+
+    .rounded-xl {
+      border-radius: 0.75rem
+    }
+
+    .rounded-t-2xl {
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem
+    }
+
+    .border {
+      border-width: 1px
+    }
+
+    .border-t {
+      border-top-width: 1px
+    }
+
+    .border-blue-800 {
+      --tw-border-opacity: 1;
+      border-color: rgb(30 64 175 / var(--tw-border-opacity, 1))
+    }
+
+    .border-blue-600 {
+      --tw-border-opacity: 1;
+      border-color: rgb(37 99 235 / var(--tw-border-opacity, 1))
+    }
+
+    .border-gray-100 {
+      --tw-border-opacity: 1;
+      border-color: rgb(243 244 246 / var(--tw-border-opacity, 1))
+    }
+
+    .border-gray-200 {
+      --tw-border-opacity: 1;
+      border-color: rgb(229 231 235 / var(--tw-border-opacity, 1))
+    }
+
+    .border-orange-100 {
+      --tw-border-opacity: 1;
+      border-color: rgb(255 237 213 / var(--tw-border-opacity, 1))
+    }
+
+    .border-red-100 {
+      --tw-border-opacity: 1;
+      border-color: rgb(254 226 226 / var(--tw-border-opacity, 1))
+    }
+
+    .border-white\/20 {
+      border-color: rgb(255 255 255 / 0.2)
+    }
+
+    .bg-blue-900 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(30 58 138 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-gray-50 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-red-500 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-blue-600 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-orange-100 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 237 213 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-orange-500 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(249 115 22 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-red-100 {
+      --tw-bg-opacity: 1;
+      background-color: rgb(254 226 226 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-white {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
+    }
+
+    .bg-white\/10 {
+      background-color: rgb(255 255 255 / 0.1)
+    }
+
+    .bg-gradient-to-br {
+      background-image: linear-gradient(to bottom right, var(--tw-gradient-stops))
+    }
+
+    .bg-gradient-to-t {
+      background-image: linear-gradient(to top, var(--tw-gradient-stops))
+    }
+
+    .from-black\/30 {
+      --tw-gradient-from: rgb(0 0 0 / 0.3) var(--tw-gradient-from-position);
+      --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+    }
+
+    .from-black\/40 {
+      --tw-gradient-from: rgb(0 0 0 / 0.4) var(--tw-gradient-from-position);
+      --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+    }
+
+    .from-blue-700 {
+      --tw-gradient-from: #1d4ed8 var(--tw-gradient-from-position);
+      --tw-gradient-to: rgb(29 78 216 / 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+    }
+
+    .to-blue-900 {
+      --tw-gradient-to: #1e3a8a var(--tw-gradient-to-position)
+    }
+
+    .to-transparent {
+      --tw-gradient-to: transparent var(--tw-gradient-to-position)
+    }
+
+    .object-cover {
+      object-fit: cover
+    }
+
+    .p-2 {
+      padding: 0.5rem
+    }
+
+    .p-3 {
+      padding: 0.75rem
+    }
+
+    .p-4 {
+      padding: 1rem
+    }
+
+    .p-6 {
+      padding: 1.5rem
+    }
+
+    .px-2 {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem
+    }
+
+    .py-8 {
+      padding-top: 2rem;
+      padding-bottom: 2rem
+    }
+
+    .px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem
+    }
+
+    .py-1 {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem
+    }
+
+    .py-12 {
+      padding-top: 3rem;
+      padding-bottom: 3rem
+    }
+
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem
+    }
+
+    .py-3 {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem
+    }
+
+    .pb-3 {
+      padding-bottom: 0.75rem
+    }
+
+    .pt-2 {
+      padding-top: 0.5rem
+    }
+
+    .pt-4 {
+      padding-top: 1rem
+    }
+
+    .pb-2 {
+      padding-bottom: 0.5rem
+    }
+
+    .pt-3 {
+      padding-top: 0.75rem
+    }
+
+    .text-center {
+      text-align: center
+    }
+
+    .text-right {
+      text-align: right
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+      line-height: 1.75rem
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+      line-height: 1.25rem
+    }
+
+    .text-xl {
+      font-size: 1.25rem;
+      line-height: 1.75rem
+    }
+
+    .text-xs {
+      font-size: 0.75rem;
+      line-height: 1rem
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+      line-height: 2rem
+    }
+
+    .text-3xl {
+      font-size: 1.875rem;
+      line-height: 2.25rem
+    }
+
+    .text-base {
+      font-size: 1rem;
+      line-height: 1.5rem
+    }
+
+    .font-bold {
+      font-weight: 700
+    }
+
+    .font-extrabold {
+      font-weight: 800
+    }
+
+    .leading-relaxed {
+      line-height: 1.625
+    }
+
+    .tracking-tight {
+      letter-spacing: -0.025em
+    }
+
+    .text-blue-100 {
+      --tw-text-opacity: 1;
+      color: rgb(219 234 254 / var(--tw-text-opacity, 1))
+    }
+
+    .text-blue-300 {
+      --tw-text-opacity: 1;
+      color: rgb(147 197 253 / var(--tw-text-opacity, 1))
+    }
+
+    .text-gray-800 {
+      --tw-text-opacity: 1;
+      color: rgb(31 41 55 / var(--tw-text-opacity, 1))
+    }
+
+    .text-white {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+    }
+
+    .text-blue-200 {
+      --tw-text-opacity: 1;
+      color: rgb(191 219 254 / var(--tw-text-opacity, 1))
+    }
+
+    .text-blue-600 {
+      --tw-text-opacity: 1;
+      color: rgb(37 99 235 / var(--tw-text-opacity, 1))
+    }
+
+    .text-blue-800 {
+      --tw-text-opacity: 1;
+      color: rgb(30 64 175 / var(--tw-text-opacity, 1))
+    }
+
+    .text-blue-900 {
+      --tw-text-opacity: 1;
+      color: rgb(30 58 138 / var(--tw-text-opacity, 1))
+    }
+
+    .text-gray-500 {
+      --tw-text-opacity: 1;
+      color: rgb(107 114 128 / var(--tw-text-opacity, 1))
+    }
+
+    .text-gray-700 {
+      --tw-text-opacity: 1;
+      color: rgb(55 65 81 / var(--tw-text-opacity, 1))
+    }
+
+    .text-gray-900 {
+      --tw-text-opacity: 1;
+      color: rgb(17 24 39 / var(--tw-text-opacity, 1))
+    }
+
+    .text-orange-600 {
+      --tw-text-opacity: 1;
+      color: rgb(234 88 12 / var(--tw-text-opacity, 1))
+    }
+
+    .text-red-600 {
+      --tw-text-opacity: 1;
+      color: rgb(220 38 38 / var(--tw-text-opacity, 1))
+    }
+
+    .opacity-0 {
+      opacity: 0
+    }
+
+    .shadow-lg {
+      --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    .shadow-2xl {
+      --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+      --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    .shadow-md {
+      --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    .shadow-sm {
+      --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    .backdrop-blur-md {
+      --tw-backdrop-blur: blur(12px);
+      -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+      backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)
+    }
+
+    .transition {
+      transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms
+    }
+
+    .duration-300 {
+      transition-duration: 300ms
+    }
+
+    .hover\:border-blue-400:hover {
+      --tw-border-opacity: 1;
+      border-color: rgb(96 165 250 / var(--tw-border-opacity, 1))
+    }
+
+    .hover\:bg-blue-800:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(30 64 175 / var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:bg-blue-50:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(239 246 255 / var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:bg-blue-700:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:bg-orange-600:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(234 88 12 / var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:bg-red-600:hover {
+      --tw-bg-opacity: 1;
+      background-color: rgb(220 38 38 / var(--tw-bg-opacity, 1))
+    }
+
+    .hover\:text-blue-300:hover {
+      --tw-text-opacity: 1;
+      color: rgb(147 197 253 / var(--tw-text-opacity, 1))
+    }
+
+    .hover\:text-white:hover {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+    }
+
+    .hover\:text-blue-700:hover {
+      --tw-text-opacity: 1;
+      color: rgb(29 78 216 / var(--tw-text-opacity, 1))
+    }
+
+    .hover\:text-orange-600:hover {
+      --tw-text-opacity: 1;
+      color: rgb(234 88 12 / var(--tw-text-opacity, 1))
+    }
+
+    .hover\:text-orange-700:hover {
+      --tw-text-opacity: 1;
+      color: rgb(194 65 12 / var(--tw-text-opacity, 1))
+    }
+
+    .hover\:text-red-600:hover {
+      --tw-text-opacity: 1;
+      color: rgb(220 38 38 / var(--tw-text-opacity, 1))
+    }
+
+    .hover\:text-red-700:hover {
+      --tw-text-opacity: 1;
+      color: rgb(185 28 28 / var(--tw-text-opacity, 1))
+    }
+
+    .hover\:underline:hover {
+      -webkit-text-decoration-line: underline;
+      text-decoration-line: underline
+    }
+
+    .hover\:shadow-xl:hover {
+      --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    .active\:scale-95:active {
+      --tw-scale-x: .95;
+      --tw-scale-y: .95;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+    }
+
+    .group:hover .group-hover\:opacity-100 {
+      opacity: 1
+    }
+
+    @media (min-width: 640px) {
+      .sm\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+
+      .sm\:px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem
+      }
+    }
+
+    @media (min-width: 768px) {
+      .md\:flex {
+        display: flex
+      }
+
+      .md\:hidden {
+        display: none
+      }
+
+      .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+      }
+
+      .md\:flex-row {
+        flex-direction: row
+      }
+
+      .md\:text-5xl {
+        font-size: 3rem;
+        line-height: 1
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+      }
+
+      .lg\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr))
+      }
+
+      .lg\:px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .xl\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr))
+      }
+    }
+  </style>
 </head>
-<body>
 
-    <div class="container">
-        
-        <!-- لوگوی اختصاصی ناب الکترونیک (دایره‌ای شده) -->
-        <div class="logo-container">
-            <!-- تصویر لوگوی ارسالی شما با نام logo.png -->
-            <img src="logo.png" alt="ناب الکترونیک" class="logo-img">
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-2 cursor-pointer" onclick="app.goHome()">
+          <!-- <svg class="w-8 h-8 text-blue-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg> -->
+          <img class="w-8 h-8 text-blue-300" src="logo.png">
+          <span class="text-xl font-bold tracking-tight">ناب الکترونیک</span>
         </div>
-
-        <div>
-            <span class="badge">مهندسان ما مشغول کار هستند</span>
+        <div class="hidden md:flex items-center gap-6 text-sm">
+          <button onclick="app.goHome()" class="hover:text-blue-300 transition">خانه</button>
+          <button onclick="app.goHome()" class="hover:text-blue-300 transition">محصولات</button>
+          <button onclick="app.showAmazing()" class="hover:text-blue-300 transition">شگفت‌انگیزها</button>
+          <button onclick="app.showBestSellers()" class="hover:text-blue-300 transition">پرفروش‌ترین‌ها</button>
+          <button onclick="app.showAbout()" class="hover:text-blue-300 transition">درباره ما</button>
+          <button onclick="app.showCart()" class="hover:text-blue-300 transition">سبد خرید</button>
         </div>
-        
-        <!-- تفاوت رنگ فروشگاه با ناب الکترونیک بدون خط زیرین -->
-        <h1>فروشگاه <span class="highlight">ناب الکترونیک</span></h1>
-        
-        <p>
-            در حال برنامه‌نویسی و آماده‌سازی یک تجربه خرید بی‌نظیر برای شما هستیم. به‌زودی با دست پر بازخواهیم گشت!
-        </p>
-
-        <!-- راه‌های ارتباطی -->
-        <div class="contact-info">
-            <span style="color: #64748b; font-size: 0.85rem;">پل‌های ارتباطی موقت با ما:</span>
-            <a href="mailto:electronicnab@gmail.com" class="contact-item">ایمیل: electronicnab@gmail.com</a>
+        <div class="flex items-center gap-4">
+          <button onclick="app.showCart()" class="relative p-2 hover:bg-blue-800 rounded-full transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+              </path>
+            </svg>
+            <span id="cart-badge"
+              class="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full hidden">0</span>
+          </button>
+          <!-- موبایل منو -->
+          <button onclick="app.toggleMobileMenu()" class="md:hidden p-2 hover:bg-blue-800 rounded-full transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
         </div>
-
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden border-t border-blue-800 mt-2 pt-2 pb-3">
+        <div class="flex flex-col gap-2 text-sm">
+          <button onclick="app.goHome(); app.toggleMobileMenu(false)"
+            class="text-right px-2 hover:text-blue-300 transition">خانه</button>
+          <button onclick="app.goHome(); app.toggleMobileMenu(false)"
+            class="text-right px-2 hover:text-blue-300 transition">محصولات</button>
+          <button onclick="app.showAmazing(); app.toggleMobileMenu(false)"
+            class="text-right px-2 hover:text-blue-300 transition">شگفت‌انگیزها</button>
+          <button onclick="app.showBestSellers(); app.toggleMobileMenu(false)"
+            class="text-right px-2 hover:text-blue-300 transition">پرفروش‌ترین‌ها</button>
+          <button onclick="app.showAbout(); app.toggleMobileMenu(false)"
+            class="text-right px-2 hover:text-blue-300 transition">درباره
+            ما</button>
+          <button onclick="app.showCart(); app.toggleMobileMenu(false)"
+            class="text-right px-2 hover:text-blue-300 transition">سبد
+            خرید</button>
+        </div>
+      </div>
     </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="app-root" class="min-h-screen">
+    <div class="fade-in">
+      <!-- Hero -->
+      <div class="bg-gradient-to-br from-blue-700 to-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-8">
+          <div class="flex-1">
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4">ناب‌ترین
+              گجت‌های الکترونیکی</h1>
+            <p class="text-blue-100 text-lg mb-6">در ناب الکترونیک از میان
+              بهترین برندها با ضمانت اصل بودن و قیمت مناسب خرید کنید.</p>
+            <button onclick="document.getElementById('products-section').scrollIntoView({behavior:'smooth'})"
+              class="bg-white text-blue-900 px-6 py-3 rounded-xl font-bold shadow-lg hover:bg-blue-50 transition">مشاهده
+              محصولات</button>
+          </div>
+          <div class="flex-1 flex justify-center">
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-2xl">
+              <svg class="w-32 h-32 text-blue-200" fill="none" stroke="currentColor" stroke-width="1.5"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                </path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Amazing Products (شگفت‌انگیزها) -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-bold text-red-600 flex items-center gap-2">
+            <span>محصولات شگفت‌انگیز</span>
+            <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">تخفیف
+              ویژه</span>
+          </h2>
+          <button onclick="app.showAmazing()" class="text-sm text-red-600 hover:text-red-700 hover:underline">مشاهده
+            همه</button>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+          <div
+            class="relative bg-white rounded-2xl shadow-sm border border-red-100 hover:shadow-xl transition duration-300 flex flex-col overflow-hidden">
+            <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">شگفت‌انگیز</span>
+            <div class="relative group cursor-pointer" onclick="app.showProduct(2)">
+              <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6f?w=500"
+                alt="خازن الکترولیتی 1000µF 25V" class="w-full h-40 object-cover">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition">
+              </div>
+            </div>
+            <div class="p-3 flex flex-col flex-1">
+              <h3 class="font-bold text-sm mb-1 line-clamp-2 cursor-pointer hover:text-red-600 transition"
+                onclick="app.showProduct(2)">خازن الکترولیتی 1000µF 25V</h3>
+              <span class="text-xs text-gray-500 mb-2">خازن</span>
+              <div class="mt-auto flex items-center justify-between">
+                <span class="text-base font-extrabold text-red-600">۲٬۵۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(2)"
+                  class="bg-red-500 hover:bg-red-600 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="relative bg-white rounded-2xl shadow-sm border border-red-100 hover:shadow-xl transition duration-300 flex flex-col overflow-hidden">
+            <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">شگفت‌انگیز</span>
+            <div class="relative group cursor-pointer" onclick="app.showProduct(5)">
+              <img src="https://images.unsplash.com/photo-1581091215367-59ab6b0d3c1d?w=500" alt="آی‌سی NE555"
+                class="w-full h-40 object-cover">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition">
+              </div>
+            </div>
+            <div class="p-3 flex flex-col flex-1">
+              <h3 class="font-bold text-sm mb-1 line-clamp-2 cursor-pointer hover:text-red-600 transition"
+                onclick="app.showProduct(5)">آی‌سی NE555</h3>
+              <span class="text-xs text-gray-500 mb-2">آی‌سی</span>
+              <div class="mt-auto flex items-center justify-between">
+                <span class="text-base font-extrabold text-red-600">۳٬۵۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(5)"
+                  class="bg-red-500 hover:bg-red-600 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="relative bg-white rounded-2xl shadow-sm border border-red-100 hover:shadow-xl transition duration-300 flex flex-col overflow-hidden">
+            <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">شگفت‌انگیز</span>
+            <div class="relative group cursor-pointer" onclick="app.showProduct(6)">
+              <img src="https://images.unsplash.com/photo-1553406830-ef2513450d76?w=500" alt="برد Arduino Uno R3"
+                class="w-full h-40 object-cover">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition">
+              </div>
+            </div>
+            <div class="p-3 flex flex-col flex-1">
+              <h3 class="font-bold text-sm mb-1 line-clamp-2 cursor-pointer hover:text-red-600 transition"
+                onclick="app.showProduct(6)">برد Arduino Uno R3</h3>
+              <span class="text-xs text-gray-500 mb-2">برد آردوینو</span>
+              <div class="mt-auto flex items-center justify-between">
+                <span class="text-base font-extrabold text-red-600">۲۸۰٬۰۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(6)"
+                  class="bg-red-500 hover:bg-red-600 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="relative bg-white rounded-2xl shadow-sm border border-red-100 hover:shadow-xl transition duration-300 flex flex-col overflow-hidden">
+            <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">شگفت‌انگیز</span>
+            <div class="relative group cursor-pointer" onclick="app.showProduct(9)">
+              <img src="https://images.unsplash.com/photo-1581091215367-59ab6b0d3c1d?w=500" alt="ماژول تغذیه MB102"
+                class="w-full h-40 object-cover">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition">
+              </div>
+            </div>
+            <div class="p-3 flex flex-col flex-1">
+              <h3 class="font-bold text-sm mb-1 line-clamp-2 cursor-pointer hover:text-red-600 transition"
+                onclick="app.showProduct(9)">ماژول تغذیه MB102</h3>
+              <span class="text-xs text-gray-500 mb-2">منبع تغذیه</span>
+              <div class="mt-auto flex items-center justify-between">
+                <span class="text-base font-extrabold text-red-600">۶۰٬۰۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(9)"
+                  class="bg-red-500 hover:bg-red-600 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Best Sellers (پرفروش‌ترین‌ها) -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-bold text-orange-600 flex items-center gap-2">
+            <span>پرفروش‌ترین‌ها</span>
+            <span class="text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded-full">محبوب
+              مشتریان</span>
+          </h2>
+          <button onclick="app.showBestSellers()"
+            class="text-sm text-orange-600 hover:text-orange-700 hover:underline">مشاهده
+            همه</button>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-orange-100 hover:shadow-xl transition duration-300 flex flex-col overflow-hidden">
+            <div class="relative group cursor-pointer" onclick="app.showProduct(1)">
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=500" alt="مقاومت 220 اهم 1/4 وات"
+                class="w-full h-40 object-cover">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition">
+              </div>
+            </div>
+            <div class="p-3 flex flex-col flex-1">
+              <h3 class="font-bold text-sm mb-1 line-clamp-2 cursor-pointer hover:text-orange-600 transition"
+                onclick="app.showProduct(1)">مقاومت 220 اهم 1/4 وات</h3>
+              <span class="text-xs text-gray-500 mb-2">مقاومت</span>
+              <div class="mt-auto flex items-center justify-between">
+                <span class="text-base font-extrabold text-orange-600">۵۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(1)"
+                  class="bg-orange-500 hover:bg-orange-600 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-orange-100 hover:shadow-xl transition duration-300 flex flex-col overflow-hidden">
+            <div class="relative group cursor-pointer" onclick="app.showProduct(2)">
+              <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6f?w=500"
+                alt="خازن الکترولیتی 1000µF 25V" class="w-full h-40 object-cover">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition">
+              </div>
+            </div>
+            <div class="p-3 flex flex-col flex-1">
+              <h3 class="font-bold text-sm mb-1 line-clamp-2 cursor-pointer hover:text-orange-600 transition"
+                onclick="app.showProduct(2)">خازن الکترولیتی 1000µF 25V</h3>
+              <span class="text-xs text-gray-500 mb-2">خازن</span>
+              <div class="mt-auto flex items-center justify-between">
+                <span class="text-base font-extrabold text-orange-600">۲٬۵۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(2)"
+                  class="bg-orange-500 hover:bg-orange-600 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-orange-100 hover:shadow-xl transition duration-300 flex flex-col overflow-hidden">
+            <div class="relative group cursor-pointer" onclick="app.showProduct(3)">
+              <img src="https://images.unsplash.com/photo-1603732551658-5fabbafa84eb?w=500" alt="دیود 1N4007"
+                class="w-full h-40 object-cover">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition">
+              </div>
+            </div>
+            <div class="p-3 flex flex-col flex-1">
+              <h3 class="font-bold text-sm mb-1 line-clamp-2 cursor-pointer hover:text-orange-600 transition"
+                onclick="app.showProduct(3)">دیود 1N4007</h3>
+              <span class="text-xs text-gray-500 mb-2">دیود</span>
+              <div class="mt-auto flex items-center justify-between">
+                <span class="text-base font-extrabold text-orange-600">۸۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(3)"
+                  class="bg-orange-500 hover:bg-orange-600 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-orange-100 hover:shadow-xl transition duration-300 flex flex-col overflow-hidden">
+            <div class="relative group cursor-pointer" onclick="app.showProduct(5)">
+              <img src="https://images.unsplash.com/photo-1581091215367-59ab6b0d3c1d?w=500" alt="آی‌سی NE555"
+                class="w-full h-40 object-cover">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition">
+              </div>
+            </div>
+            <div class="p-3 flex flex-col flex-1">
+              <h3 class="font-bold text-sm mb-1 line-clamp-2 cursor-pointer hover:text-orange-600 transition"
+                onclick="app.showProduct(5)">آی‌سی NE555</h3>
+              <span class="text-xs text-gray-500 mb-2">آی‌سی</span>
+              <div class="mt-auto flex items-center justify-between">
+                <span class="text-base font-extrabold text-orange-600">۳٬۵۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(5)"
+                  class="bg-orange-500 hover:bg-orange-600 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+        <div class="flex gap-3 overflow-x-auto hide-scrollbar pb-2">
+
+          <button onclick="app.filterCategory('all')"
+            class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold border transition bg-blue-600 text-white border-blue-600 shadow-md">
+            همه قطعات
+          </button>
+
+          <button onclick="app.filterCategory('resistor')"
+            class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold border transition bg-white text-gray-700 border-gray-200 hover:border-blue-400 hover:text-blue-700">
+            مقاومت
+          </button>
+
+          <button onclick="app.filterCategory('capacitor')"
+            class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold border transition bg-white text-gray-700 border-gray-200 hover:border-blue-400 hover:text-blue-700">
+            خازن
+          </button>
+
+          <button onclick="app.filterCategory('diode')"
+            class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold border transition bg-white text-gray-700 border-gray-200 hover:border-blue-400 hover:text-blue-700">
+            دیود
+          </button>
+
+          <button onclick="app.filterCategory('transistor')"
+            class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold border transition bg-white text-gray-700 border-gray-200 hover:border-blue-400 hover:text-blue-700">
+            ترانزیستور
+          </button>
+
+          <button onclick="app.filterCategory('ic')"
+            class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold border transition bg-white text-gray-700 border-gray-200 hover:border-blue-400 hover:text-blue-700">
+            آی‌سی
+          </button>
+
+          <button onclick="app.filterCategory('arduino')"
+            class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold border transition bg-white text-gray-700 border-gray-200 hover:border-blue-400 hover:text-blue-700">
+            برد آردوینو
+          </button>
+
+          <button onclick="app.filterCategory('sensor')"
+            class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold border transition bg-white text-gray-700 border-gray-200 hover:border-blue-400 hover:text-blue-700">
+            سنسورها
+          </button>
+
+          <button onclick="app.filterCategory('module')"
+            class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold border transition bg-white text-gray-700 border-gray-200 hover:border-blue-400 hover:text-blue-700">
+            ماژول‌ها
+          </button>
+
+          <button onclick="app.filterCategory('power')"
+            class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold border transition bg-white text-gray-700 border-gray-200 hover:border-blue-400 hover:text-blue-700">
+            منبع تغذیه
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Products -->
+      <div id="products-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold text-gray-900">همه قطعات</h2>
+          <span class="text-sm text-gray-500">9 محصول</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary-200 transition duration-300 flex flex-col">
+            <div class="relative group cursor-pointer" onclick="app.showProduct(1)">
+              <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=500" alt="مقاومت 220 اهم 1/4 وات"
+                class="w-full h-52 object-cover rounded-t-2xl">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-t-2xl opacity-0 group-hover:opacity-100 transition">
+              </div>
+
+              <span class="absolute top-2 left-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full">پرفروش</span>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <div class="text-xs text-blue-600 font-bold mb-1">مقاومت</div>
+              <h3 class="font-bold text-gray-900 mb-2 line-clamp-2 cursor-pointer hover:text-blue-700 transition"
+                onclick="app.showProduct(1)">مقاومت 220 اهم 1/4 وات</h3>
+              <div class="mt-auto pt-3 flex items-center justify-between">
+                <span class="text-lg font-extrabold text-blue-800">۵۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(1)"
+                  class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary-200 transition duration-300 flex flex-col">
+            <div class="relative group cursor-pointer" onclick="app.showProduct(2)">
+              <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6f?w=500"
+                alt="خازن الکترولیتی 1000µF 25V" class="w-full h-52 object-cover rounded-t-2xl">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-t-2xl opacity-0 group-hover:opacity-100 transition">
+              </div>
+              <span
+                class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">شگفت‌انگیز</span>
+              <span class="absolute top-2 left-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full">پرفروش</span>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <div class="text-xs text-blue-600 font-bold mb-1">خازن</div>
+              <h3 class="font-bold text-gray-900 mb-2 line-clamp-2 cursor-pointer hover:text-blue-700 transition"
+                onclick="app.showProduct(2)">خازن الکترولیتی 1000µF 25V</h3>
+              <div class="mt-auto pt-3 flex items-center justify-between">
+                <span class="text-lg font-extrabold text-blue-800">۲٬۵۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(2)"
+                  class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary-200 transition duration-300 flex flex-col">
+            <div class="relative group cursor-pointer" onclick="app.showProduct(3)">
+              <img src="https://images.unsplash.com/photo-1603732551658-5fabbafa84eb?w=500" alt="دیود 1N4007"
+                class="w-full h-52 object-cover rounded-t-2xl">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-t-2xl opacity-0 group-hover:opacity-100 transition">
+              </div>
+
+              <span class="absolute top-2 left-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full">پرفروش</span>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <div class="text-xs text-blue-600 font-bold mb-1">دیود</div>
+              <h3 class="font-bold text-gray-900 mb-2 line-clamp-2 cursor-pointer hover:text-blue-700 transition"
+                onclick="app.showProduct(3)">دیود 1N4007</h3>
+              <div class="mt-auto pt-3 flex items-center justify-between">
+                <span class="text-lg font-extrabold text-blue-800">۸۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(3)"
+                  class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary-200 transition duration-300 flex flex-col">
+            <div class="relative group cursor-pointer" onclick="app.showProduct(4)">
+              <img src="https://images.unsplash.com/photo-1581093588401-16ec33fab9ef?w=500" alt="ترانزیستور BC547"
+                class="w-full h-52 object-cover rounded-t-2xl">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-t-2xl opacity-0 group-hover:opacity-100 transition">
+              </div>
+
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <div class="text-xs text-blue-600 font-bold mb-1">ترانزیستور</div>
+              <h3 class="font-bold text-gray-900 mb-2 line-clamp-2 cursor-pointer hover:text-blue-700 transition"
+                onclick="app.showProduct(4)">ترانزیستور BC547</h3>
+              <div class="mt-auto pt-3 flex items-center justify-between">
+                <span class="text-lg font-extrabold text-blue-800">۱٬۲۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(4)"
+                  class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary-200 transition duration-300 flex flex-col">
+            <div class="relative group cursor-pointer" onclick="app.showProduct(5)">
+              <img src="https://images.unsplash.com/photo-1581091215367-59ab6b0d3c1d?w=500" alt="آی‌سی NE555"
+                class="w-full h-52 object-cover rounded-t-2xl">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-t-2xl opacity-0 group-hover:opacity-100 transition">
+              </div>
+              <span
+                class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">شگفت‌انگیز</span>
+              <span class="absolute top-2 left-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full">پرفروش</span>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <div class="text-xs text-blue-600 font-bold mb-1">آی‌سی</div>
+              <h3 class="font-bold text-gray-900 mb-2 line-clamp-2 cursor-pointer hover:text-blue-700 transition"
+                onclick="app.showProduct(5)">آی‌سی NE555</h3>
+              <div class="mt-auto pt-3 flex items-center justify-between">
+                <span class="text-lg font-extrabold text-blue-800">۳٬۵۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(5)"
+                  class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary-200 transition duration-300 flex flex-col">
+            <div class="relative group cursor-pointer" onclick="app.showProduct(6)">
+              <img src="https://images.unsplash.com/photo-1553406830-ef2513450d76?w=500" alt="برد Arduino Uno R3"
+                class="w-full h-52 object-cover rounded-t-2xl">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-t-2xl opacity-0 group-hover:opacity-100 transition">
+              </div>
+              <span
+                class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">شگفت‌انگیز</span>
+              <span class="absolute top-2 left-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full">پرفروش</span>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <div class="text-xs text-blue-600 font-bold mb-1">برد
+                آردوینو</div>
+              <h3 class="font-bold text-gray-900 mb-2 line-clamp-2 cursor-pointer hover:text-blue-700 transition"
+                onclick="app.showProduct(6)">برد Arduino Uno R3</h3>
+              <div class="mt-auto pt-3 flex items-center justify-between">
+                <span class="text-lg font-extrabold text-blue-800">۲۸۰٬۰۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(6)"
+                  class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary-200 transition duration-300 flex flex-col">
+            <div class="relative group cursor-pointer" onclick="app.showProduct(7)">
+              <img src="https://images.unsplash.com/photo-1581091870627-3f89d4b4b67c?w=500"
+                alt="سنسور دما و رطوبت DHT22" class="w-full h-52 object-cover rounded-t-2xl">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-t-2xl opacity-0 group-hover:opacity-100 transition">
+              </div>
+
+              <span class="absolute top-2 left-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full">پرفروش</span>
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <div class="text-xs text-blue-600 font-bold mb-1">سنسورها</div>
+              <h3 class="font-bold text-gray-900 mb-2 line-clamp-2 cursor-pointer hover:text-blue-700 transition"
+                onclick="app.showProduct(7)">سنسور دما و رطوبت DHT22</h3>
+              <div class="mt-auto pt-3 flex items-center justify-between">
+                <span class="text-lg font-extrabold text-blue-800">۹۵٬۰۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(7)"
+                  class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary-200 transition duration-300 flex flex-col">
+            <div class="relative group cursor-pointer" onclick="app.showProduct(8)">
+              <img src="https://images.unsplash.com/photo-1581091215367-59ab6b0d3c1d?w=500"
+                alt="ماژول رله 5 ولت تک کانال" class="w-full h-52 object-cover rounded-t-2xl">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-t-2xl opacity-0 group-hover:opacity-100 transition">
+              </div>
+
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <div class="text-xs text-blue-600 font-bold mb-1">ماژول‌ها</div>
+              <h3 class="font-bold text-gray-900 mb-2 line-clamp-2 cursor-pointer hover:text-blue-700 transition"
+                onclick="app.showProduct(8)">ماژول رله 5 ولت تک کانال</h3>
+              <div class="mt-auto pt-3 flex items-center justify-between">
+                <span class="text-lg font-extrabold text-blue-800">۴۵٬۰۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(8)"
+                  class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary-200 transition duration-300 flex flex-col">
+            <div class="relative group cursor-pointer" onclick="app.showProduct(9)">
+              <img src="https://images.unsplash.com/photo-1581091215367-59ab6b0d3c1d?w=500" alt="ماژول تغذیه MB102"
+                class="w-full h-52 object-cover rounded-t-2xl">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-t-2xl opacity-0 group-hover:opacity-100 transition">
+              </div>
+              <span
+                class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">شگفت‌انگیز</span>
+
+            </div>
+            <div class="p-4 flex flex-col flex-1">
+              <div class="text-xs text-blue-600 font-bold mb-1">منبع
+                تغذیه</div>
+              <h3 class="font-bold text-gray-900 mb-2 line-clamp-2 cursor-pointer hover:text-blue-700 transition"
+                onclick="app.showProduct(9)">ماژول تغذیه MB102</h3>
+              <div class="mt-auto pt-3 flex items-center justify-between">
+                <span class="text-lg font-extrabold text-blue-800">۶۰٬۰۰۰
+                  تومان</span>
+                <button onclick="app.addToCart(9)"
+                  class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-blue-100 mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">ناب الکترونیک</h3>
+          <p class="text-sm leading-relaxed">بهترین مقصد برای خرید لوازم
+            الکترونیکی با قیمت مناسب و کیفیت
+            عالی. ارسال سریع به تمام نقاط کشور.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">دسته‌بندی‌ها</h3>
+          <ul class="text-sm space-y-1">
+            <li><button onclick="app.filterCategory('mobile')" class="hover:text-white transition">موبایل</button></li>
+            <li><button onclick="app.filterCategory('laptop')" class="hover:text-white transition">لپ‌تاپ</button></li>
+            <li><button onclick="app.filterCategory('tablet')" class="hover:text-white transition">تبلت</button></li>
+            <li><button onclick="app.filterCategory('headphone')" class="hover:text-white transition">هدفون</button>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-2">تماس با ما</h3>
+          <p class="text-sm">تهران، خیابان جمهوری</p>
+          <p class="text-sm mt-1">پشتیبانی: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+        </div>
+      </div>
+      <div class="border-t border-blue-800 mt-6 pt-4 text-center text-xs">
+        © ۱۴۰۵ ناب الکترونیک. تمام حقوق محفوظ است.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const products = [
+
+      {
+        id: 1,
+        title: 'مقاومت 220 اهم 1/4 وات',
+        category: 'resistor',
+        price: 500,
+        image: 'https://eshop.eca.ir/42555-medium_default/%D9%85%D9%82%D8%A7%D9%88%D9%85%D8%AA-220-%D8%A7%D9%87%D9%85-14w.jpg',
+        desc: 'مقاومت کربنی 220 اهم با توان 1/4 وات مناسب مدارهای الکترونیکی.',
+        isAmazing: false,
+        isBestSeller: true
+      },
+
+      {
+        id: 2,
+        title: 'خازن الکترولیتی 1000µF 25V',
+        category: 'capacitor',
+        price: 2500,
+        image: 'https://eshop.eca.ir/45537-medium_default/%D8%AE%D8%A7%D8%B2%D9%86-%D8%A7%D9%84%DA%A9%D8%AA%D8%B1%D9%88%D9%84%DB%8C%D8%AA%DB%8C-1000uf-25v.jpg',
+        desc: 'خازن الکترولیتی با ظرفیت 1000 میکروفاراد و ولتاژ 25 ولت.',
+        isAmazing: true,
+        isBestSeller: true
+      },
+
+      {
+        id: 3,
+        title: 'دیود 1N4007',
+        category: 'diode',
+        price: 800,
+        image: 'https://eshop.eca.ir/69643-medium_default/%D8%AF%DB%8C%D9%88%D8%AF-1n4007.jpg',
+        desc: 'دیود یکسو کننده 1N4007 مناسب برای مدارهای تغذیه.',
+        isAmazing: false,
+        isBestSeller: true
+      },
+
+      {
+        id: 4,
+        title: 'ترانزیستور BC547',
+        category: 'transistor',
+        price: 1200,
+        image: 'https://eshop.eca.ir/68500-medium_default/%D8%AA%D8%B1%D8%A7%D9%86%D8%B2%DB%8C%D8%B3%D8%AA%D9%88%D8%B1-bc547-%D9%86%D9%88%D8%B9-npn-%D9%BE%DA%A9%DB%8C%D8%AC-to-92.jpg',
+        desc: 'ترانزیستور NPN پرکاربرد برای تقویت سیگنال و سوئیچینگ.',
+        isAmazing: false,
+        isBestSeller: false
+      },
+
+      {
+        id: 5,
+        title: 'آی‌سی NE555',
+        category: 'ic',
+        price: 3500,
+        image: 'https://eshop.eca.ir/68719-large_default/%D8%AA%D8%B1%D8%A7%D8%B4%D9%87-%D8%AA%D8%A7%DB%8C%D9%85%D8%B1-ne555-%D9%BE%DA%A9%DB%8C%D8%AC-dip.jpg',
+        desc: 'آی‌سی تایمر NE555 مناسب تولید پالس و مدارهای تایمر.',
+        isAmazing: true,
+        isBestSeller: true
+      },
+
+      {
+        id: 6,
+        title: 'برد Arduino Uno R3',
+        category: 'arduino',
+        price: 280000,
+        image: 'https://eshop.eca.ir/121989-medium_default/%D8%A8%D8%B1%D8%AF-%D8%A2%D8%B1%D8%AF%D9%88%DB%8C%D9%86%D9%88-arduino-uno-r3.jpg',
+        desc: 'برد توسعه Arduino Uno R3 مناسب پروژه‌های الکترونیک و رباتیک.',
+        isAmazing: true,
+        isBestSeller: true
+      },
+
+      {
+        id: 7,
+        title: 'سنسور دما و رطوبت DHT22',
+        category: 'sensor',
+        price: 95000,
+        image: 'https://dkstatics-public.digikala.com/digikala-products/60f7d4b6526ec184b178e3886c853ec9f8dfdf6e_1610533542.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90',
+        desc: 'سنسور دیجیتال اندازه‌گیری دما و رطوبت با دقت بالا.',
+        isAmazing: false,
+        isBestSeller: true
+      },
+
+      {
+        id: 8,
+        title: 'ماژول رله 5 ولت تک کانال',
+        category: 'module',
+        price: 45000,
+        image: 'https://eshop.eca.ir/113949-medium_default/%D9%85%D8%A7%DA%98%D9%88%D9%84-%D8%B1%D9%84%D9%87-5-%D9%88%D9%84%D8%AA-%DB%8C%DA%A9-%DA%A9%D8%A7%D9%86%D8%A7%D9%84%D9%87.jpg',
+        desc: 'ماژول رله مناسب کنترل وسایل برقی با آردوینو.',
+        isAmazing: false,
+        isBestSeller: false
+      },
+
+      {
+        id: 9,
+        title: 'ماژول تغذیه MB102',
+        category: 'power',
+        price: 60000,
+        image: 'https://eshop.eca.ir/74839-large_default/%D9%85%D8%A7%DA%98%D9%88%D9%84-%D8%AA%D8%BA%D8%B0%DB%8C%D9%87-%D8%A8%D8%B1%D8%AF-%D8%A8%D9%88%D8%B1%D8%AF-5v--33v.jpg',
+        desc: 'ماژول منبع تغذیه مناسب بردبورد با خروجی 3.3 و 5 ولت.',
+        isAmazing: true,
+        isBestSeller: false
+      }
+
+    ];
+
+
+    const categories = [
+      { key: 'all', label: 'همه قطعات' },
+      { key: 'resistor', label: 'مقاومت' },
+      { key: 'capacitor', label: 'خازن' },
+      { key: 'diode', label: 'دیود' },
+      { key: 'transistor', label: 'ترانزیستور' },
+      { key: 'ic', label: 'آی‌سی' },
+      { key: 'arduino', label: 'برد آردوینو' },
+      { key: 'sensor', label: 'سنسورها' },
+      { key: 'module', label: 'ماژول‌ها' },
+      { key: 'power', label: 'منبع تغذیه' }
+    ];
+
+
+    function formatPrice(p) {
+      return p.toLocaleString('fa-IR') + ' تومان';
+    }
+
+    const app = {
+      cart: [],
+      currentView: 'home',
+      selectedCategory: 'all',
+
+      init() {
+        this.renderHome();
+        this.updateCartBadge();
+      },
+
+      toggleMobileMenu(force) {
+        const menu = document.getElementById('mobile-menu');
+        if (typeof force === 'boolean') {
+          menu.classList.toggle('hidden', !force);
+        } else {
+          menu.classList.toggle('hidden');
+        }
+      },
+
+      goHome() {
+        this.currentView = 'home';
+        this.selectedCategory = 'all';
+        this.renderHome();
+        window.scrollTo(0, 0);
+      },
+
+      filterCategory(cat) {
+        this.selectedCategory = cat;
+        this.currentView = 'home';
+        this.renderHome();
+        window.scrollTo(0, 0);
+      },
+
+      showCart() {
+        this.currentView = 'cart';
+        this.renderCart();
+        window.scrollTo(0, 0);
+      },
+
+      showProduct(id) {
+        this.currentView = 'product';
+        this.renderProduct(id);
+        window.scrollTo(0, 0);
+      },
+
+      showAmazing() {
+        this.currentView = 'amazing';
+        this.renderAmazing();
+        window.scrollTo(0, 0);
+      },
+
+      showBestSellers() {
+        this.currentView = 'best';
+        this.renderBestSellers();
+        window.scrollTo(0, 0);
+      },
+
+      showAbout() {
+        this.currentView = 'about';
+        this.renderAbout();
+        window.scrollTo(0, 0);
+      },
+
+      addToCart(id, qty = 1) {
+        const item = this.cart.find(i => i.id === id);
+        if (item) {
+          item.qty += qty;
+        } else {
+          this.cart.push({ id, qty });
+        }
+        this.updateCartBadge();
+        // show toast
+        const toast = document.createElement('div');
+        toast.className = 'fixed bottom-4 left-4 bg-blue-800 text-white px-4 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 fade-in';
+        toast.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> <span>محصول به سبد خرید اضافه شد</span>`;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 2000);
+      },
+
+      removeFromCart(id) {
+        this.cart = this.cart.filter(i => i.id !== id);
+        this.updateCartBadge();
+        if (this.currentView === 'cart') this.renderCart();
+      },
+
+      changeQty(id, delta) {
+        const item = this.cart.find(i => i.id === id);
+        if (!item) return;
+        item.qty += delta;
+        if (item.qty <= 0) this.removeFromCart(id);
+        else {
+          this.updateCartBadge();
+          if (this.currentView === 'cart') this.renderCart();
+        }
+      },
+
+      updateCartBadge() {
+        const badge = document.getElementById('cart-badge');
+        const total = this.cart.reduce((a, b) => a + b.qty, 0);
+        if (total > 0) {
+          badge.classList.remove('hidden');
+          badge.textContent = total;
+        } else {
+          badge.classList.add('hidden');
+        }
+      },
+
+      getCartTotal() {
+        return this.cart.reduce((sum, item) => {
+          const p = products.find(x => x.id === item.id);
+          return sum + (p ? p.price * item.qty : 0);
+        }, 0);
+      },
+
+      // صفحه اصلی + سشن‌هایی از شگفت‌انگیزها و پرفروش‌ها
+      renderHome() {
+        const filtered = this.selectedCategory === 'all' ? products : products.filter(p => p.category === this.selectedCategory);
+        const catTitle = categories.find(c => c.key === this.selectedCategory)?.label || 'محصولات';
+
+        const amazing = products.filter(p => p.isAmazing).slice(0, 4);
+        const best = products.filter(p => p.isBestSeller).slice(0, 4);
+
+        let html = `
+          <div class="fade-in">
+            <!-- Hero -->
+            <div class="bg-gradient-to-br from-blue-700 to-blue-900 text-white">
+              <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-8">
+                <div class="flex-1">
+                  <h1 class="text-3xl md:text-5xl font-extrabold mb-4">ناب‌ترین گجت‌های الکترونیکی</h1>
+                  <p class="text-blue-100 text-lg mb-6">در ناب الکترونیک از میان بهترین برندها با ضمانت اصل بودن و قیمت مناسب خرید کنید.</p>
+                  <button onclick="document.getElementById('products-section').scrollIntoView({behavior:'smooth'})" class="bg-white text-blue-900 px-6 py-3 rounded-xl font-bold shadow-lg hover:bg-blue-50 transition">مشاهده محصولات</button>
+                </div>
+                <div class="flex-1 flex justify-center">
+                  <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-2xl">
+                    <svg class="w-32 h-32 text-blue-200" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Amazing Products (شگفت‌انگیزها) -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+              <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl font-bold text-red-600 flex items-center gap-2">
+                  <span>محصولات شگفت‌انگیز</span>
+                  <span class="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-full">تخفیف ویژه</span>
+                </h2>
+                <button onclick="app.showAmazing()" class="text-sm text-red-600 hover:text-red-700 hover:underline">مشاهده همه</button>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                ${amazing.map(p => `
+                  <div class="relative bg-white rounded-2xl shadow-sm border border-red-100 hover:shadow-xl transition duration-300 flex flex-col overflow-hidden">
+                    <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">شگفت‌انگیز</span>
+                    <div class="relative group cursor-pointer" onclick="app.showProduct(${p.id})">
+                      <img src="${p.image}" alt="${p.title}" class="w-full h-40 object-cover">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+                    </div>
+                    <div class="p-3 flex flex-col flex-1">
+                      <h3 class="font-bold text-sm mb-1 line-clamp-2 cursor-pointer hover:text-red-600 transition" onclick="app.showProduct(${p.id})">${p.title}</h3>
+                      <span class="text-xs text-gray-500 mb-2">${categories.find(c => c.key === p.category)?.label || p.category}</span>
+                      <div class="mt-auto flex items-center justify-between">
+                        <span class="text-base font-extrabold text-red-600">${formatPrice(p.price)}</span>
+                        <button onclick="app.addToCart(${p.id})" class="bg-red-500 hover:bg-red-600 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Best Sellers (پرفروش‌ترین‌ها) -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+              <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl font-bold text-orange-600 flex items-center gap-2">
+                  <span>پرفروش‌ترین‌ها</span>
+                  <span class="text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded-full">محبوب مشتریان</span>
+                </h2>
+                <button onclick="app.showBestSellers()" class="text-sm text-orange-600 hover:text-orange-700 hover:underline">مشاهده همه</button>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                ${best.map(p => `
+                  <div class="bg-white rounded-2xl shadow-sm border border-orange-100 hover:shadow-xl transition duration-300 flex flex-col overflow-hidden">
+                    <div class="relative group cursor-pointer" onclick="app.showProduct(${p.id})">
+                      <img src="${p.image}" alt="${p.title}" class="w-full h-40 object-cover">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
+                    </div>
+                    <div class="p-3 flex flex-col flex-1">
+                      <h3 class="font-bold text-sm mb-1 line-clamp-2 cursor-pointer hover:text-orange-600 transition" onclick="app.showProduct(${p.id})">${p.title}</h3>
+                      <span class="text-xs text-gray-500 mb-2">${categories.find(c => c.key === p.category)?.label || p.category}</span>
+                      <div class="mt-auto flex items-center justify-between">
+                        <span class="text-base font-extrabold text-orange-600">${formatPrice(p.price)}</span>
+                        <button onclick="app.addToCart(${p.id})" class="bg-orange-500 hover:bg-orange-600 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+              <div class="flex gap-3 overflow-x-auto hide-scrollbar pb-2">
+                ${categories.map(c => `
+                  <button onclick="app.filterCategory('${c.key}')" class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold border transition ${this.selectedCategory === c.key ? 'bg-blue-600 text-white border-blue-600 shadow-md' : 'bg-white text-gray-700 border-gray-200 hover:border-blue-400 hover:text-blue-700'}">
+                    ${c.label}
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Products -->
+            <div id="products-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+              <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold text-gray-900">${catTitle}</h2>
+                <span class="text-sm text-gray-500">${filtered.length} محصول</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                ${filtered.map(p => `
+                  <div class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary-200 transition duration-300 flex flex-col">
+                    <div class="relative group cursor-pointer" onclick="app.showProduct(${p.id})">
+                      <img src="${p.image}" alt="${p.title}" class="w-full h-52 object-cover rounded-t-2xl">
+                      <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-t-2xl opacity-0 group-hover:opacity-100 transition"></div>
+                      ${p.isAmazing ? '<span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">شگفت‌انگیز</span>' : ''}
+                      ${p.isBestSeller ? '<span class="absolute top-2 left-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full">پرفروش</span>' : ''}
+                    </div>
+                    <div class="p-4 flex flex-col flex-1">
+                      <div class="text-xs text-blue-600 font-bold mb-1">${categories.find(c => c.key === p.category)?.label || p.category}</div>
+                      <h3 class="font-bold text-gray-900 mb-2 line-clamp-2 cursor-pointer hover:text-blue-700 transition" onclick="app.showProduct(${p.id})">${p.title}</h3>
+                      <div class="mt-auto pt-3 flex items-center justify-between">
+                        <span class="text-lg font-extrabold text-blue-800">${formatPrice(p.price)}</span>
+                        <button onclick="app.addToCart(${p.id})" class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+              ${filtered.length === 0 ? '<div class="text-center py-12 text-gray-500">محصولی در این دسته‌بندی وجود ندارد.</div>' : ''}
+            </div>
+          </div>
+        `;
+        document.getElementById('app-root').innerHTML = html;
+      },
+
+      renderProduct(id) {
+        const p = products.find(x => x.id === id);
+        if (!p) return this.goHome();
+        const html = `
+          <div class="fade-in max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <button onclick="app.goHome()" class="mb-4 flex items-center gap-2 text-gray-500 hover:text-blue-700 transition">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              <span>بازگشت به محصولات</span>
+            </button>
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <div class="grid md:grid-cols-2 gap-0">
+                <div class="bg-gray-50">
+                  <img src="${p.image}" alt="${p.title}" class="w-full h-80 md:h-full object-cover">
+                </div>
+                <div class="p-6 md:p-10 flex flex-col">
+                  <div class="text-sm text-blue-600 font-bold mb-2">${categories.find(c => c.key === p.category)?.label || p.category}</div>
+                  <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">${p.title}</h1>
+                  ${p.isAmazing ? '<p class="text-xs inline-flex items-center gap-1 text-red-600 bg-red-50 px-2 py-1 rounded-full mb-3">محصول شگفت‌انگیز</p>' : ''}
+                  ${p.isBestSeller ? '<p class="text-xs inline-flex items-center gap-1 text-orange-600 bg-orange-50 px-2 py-1 rounded-full mb-3">پرفروش‌ترین</p>' : ''}
+                  <p class="text-gray-600 leading-relaxed mb-6">${p.desc}</p>
+                  <div class="mt-auto">
+                    <div class="flex items-center justify-between gap-4 mb-6">
+                      <span class="text-2xl font-extrabold text-blue-800">${formatPrice(p.price)}</span>
+                      <div class="flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-2">
+                        <button onclick="document.getElementById('pq-${p.id}').stepDown()" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary-700 font-bold">-</button>
+                        <input id="pq-${p.id}" type="number" value="1" min="1" class="w-10 bg-transparent text-center font-bold text-gray-900 outline-none" readonly>
+                        <button onclick="document.getElementById('pq-${p.id}').stepUp()" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary-700 font-bold">+</button>
+                      </div>
+                    </div>
+                    <button onclick="app.addToCart(${p.id}, parseInt(document.getElementById('pq-${p.id}').value))" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-lg transition active:scale-95">
+                      افزودن به سبد خرید
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Related products -->
+            <div class="mt-10">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">محصولات مشابه</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                ${products.filter(x => x.category === p.category && x.id !== p.id).slice(0, 4).map(r => `
+                  <div class="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-lg transition cursor-pointer" onclick="app.showProduct(${r.id})">
+                    <img src="${r.image}" class="w-full h-40 object-cover rounded-t-xl">
+                    <div class="p-3">
+                      <h4 class="font-bold text-sm mb-1 line-clamp-2">${r.title}</h4>
+                      <span class="text-blue-700 font-bold text-sm">${formatPrice(r.price)}</span>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+        document.getElementById('app-root').innerHTML = html;
+      },
+
+      renderCart() {
+        const items = this.cart.map(item => {
+          const p = products.find(x => x.id === item.id);
+          return { ...item, product: p };
+        }).filter(i => i.product);
+
+        const html = `
+          <div class="fade-in max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">سبد خرید</h2>
+            ${items.length === 0 ? `
+              <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-12 text-center">
+                <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                </div>
+                <p class="text-gray-500 mb-4">سبد خرید شما خالی است.</p>
+                <button onclick="app.goHome()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-bold transition">مشاهده محصولات</button>
+              </div>
+            ` : `
+              <div class="flex flex-col lg:flex-row gap-6">
+                <div class="flex-1 space-y-4">
+                  ${items.map(item => `
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex gap-4">
+                      <img src="${item.product.image}" class="w-24 h-24 object-cover rounded-lg flex-shrink-0">
+                      <div class="flex-1 flex flex-col">
+                        <div class="flex items-start justify-between">
+                          <h3 class="font-bold text-gray-900 mb-1">${item.product.title}</h3>
+                          <button onclick="app.removeFromCart(${item.id})" class="text-gray-400 hover:text-red-500 transition">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                          </button>
+                        </div>
+                        <div class="text-sm text-gray-500 mb-2">${categories.find(c => c.key === item.product.category)?.label}</div>
+                        <div class="mt-auto flex items-center justifyبین">
+                          <div class="flex items-center bg-gray-100 rounded-lg">
+                            <button onclick="app.changeQty(${item.id}, -1)" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary-700 font-bold">-</button>
+                            <span class="w-8 text-center font-bold text-gray-900">${item.qty}</span>
+                            <button onclick="app.changeQty(${item.id}, 1)" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary-700 font-bold">+</button>
+                          </div>
+                          <span class="font-bold text-blue-800">${formatPrice(item.product.price * item.qty)}</span>
+                        </div>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+                <div class="w-full lg:w-80">
+                  <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 sticky top-20">
+                    <h3 class="font-bold text-lg mb-4">خلاصه سفارش</h3>
+                    <div class="flex justify-between mb-2 text-gray-600">
+                      <span>تعداد کالا</span>
+                      <span class="font-bold">${items.reduce((a, b) => a + b.qty, 0)}</span>
+                    </div>
+                    <div class="flex justifyبین mb-4 text-gray-600">
+                      <span>هزینه ارسال</span>
+                      <span class="font-bold text-blue-600">رایگان</span>
+                    </div>
+                    <div class="border-t border-gray-100 pt-4 flex justifyبین items-center mb-6">
+                      <span class="font-bold text-gray-900">مجموع</span>
+                      <span class="text-xl font-extrabold text-blue-800">${formatPrice(this.getCartTotal())}</span>
+                    </div>
+                    <button onclick="alert('به زودی اتصال به درگاه پرداخت اضافه می‌شود.')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl shadow-lg transition active:scale-95">
+                      تکمیل خرید
+                    </button>
+                    <button onclick="app.goHome()" class="w-full mt-3 text-gray-500 text-sm font-bold hover:text-blue-700 transition">
+                      ادامه خرید
+                    </button>
+                  </div>
+                </div>
+              </div>
+            `}
+          </div>
+        `;
+        document.getElementById('app-root').innerHTML = html;
+      },
+
+      renderAmazing() {
+        const list = products.filter(p => p.isAmazing);
+        const html = `
+          <div class="fade-in max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-2xl font-bold text-red-600">محصولات شگفت‌انگیز</h2>
+              <button onclick="app.goHome()" class="text-sm text-gray-500 hover:text-blue-700 transition">بازگشت به خانه</button>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              ${list.map(p => `
+                <div class="relative bg-white rounded-2xl shadow-sm border border-red-100 hover:shadow-xl transition duration-300 flex flex-col">
+                  <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">شگفت‌انگیز</span>
+                  <div class="relative group cursor-pointer" onclick="app.showProduct(${p.id})">
+                    <img src="${p.image}" alt="${p.title}" class="w-full h-52 object-cover rounded-t-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-t-2xl opacity-0 group-hover:opacity-100 transition"></div>
+                  </div>
+                  <div class="p-4 flex flex-col flex-1">
+                    <div class="text-xs text-red-600 font-bold mb-1">${categories.find(c => c.key === p.category)?.label || p.category}</div>
+                    <h3 class="font-bold text-gray-900 mb-2 line-clamp-2 cursor-pointer hover:text-red-600 transition" onclick="app.showProduct(${p.id})">${p.title}</h3>
+                    <div class="mt-auto pt-3 flex items-center justify-between">
+                      <span class="text-lg font-extrabold text-red-600">${formatPrice(p.price)}</span>
+                      <button onclick="app.addToCart(${p.id})" class="bg-red-500 hover:bg-red-600 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+        document.getElementById('app-root').innerHTML = html;
+      },
+
+      renderBestSellers() {
+        const list = products.filter(p => p.isBestSeller);
+        const html = `
+          <div class="fade-in max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex items-center justifyبین mb-6">
+              <h2 class="text-2xl font-bold text-orange-600">پرفروش‌ترین محصولات</h2>
+              <button onclick="app.goHome()" class="text-sm text-gray-500 hover:text-blue-700 transition">بازگشت به خانه</button>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              ${list.map(p => `
+                <div class="bg-white rounded-2xl shadow-sm border border-orange-100 hover:shadow-xl transition duration-300 flex flex-col">
+                  <div class="relative group cursor-pointer" onclick="app.showProduct(${p.id})">
+                    <img src="${p.image}" alt="${p.title}" class="w-full h-52 object-cover rounded-t-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-t-2xl opacity-0 group-hover:opacity-100 transition"></div>
+                    <span class="absolute top-2 right-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full">پرفروش</span>
+                  </div>
+                  <div class="p-4 flex flex-col flex-1">
+                    <div class="text-xs text-orange-600 font-bold mb-1">${categories.find(c => c.key === p.category)?.label || p.category}</div>
+                    <h3 class="font-bold text-gray-900 mb-2 line-clamp-2 cursor-pointer hover:text-orange-600 transition" onclick="app.showProduct(${p.id})">${p.title}</h3>
+                    <div class="mt-auto pt-3 flex items-center justifyبین">
+                      <span class="text-lg font-extrabold text-orange-600">${formatPrice(p.price)}</span>
+                      <button onclick="app.addToCart(${p.id})" class="bg-orange-500 hover:bg-orange-600 text-white p-2 rounded-lg shadow-md transition active:scale-95">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+        document.getElementById('app-root').innerHTML = html;
+      },
+
+      renderAbout() {
+        const html = `
+          <div class="fade-in max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-8">
+              <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">درباره ناب الکترونیک</h1>
+              <p class="text-gray-600 leading-relaxed mb-4">
+                ناب الکترونیک یک فروشگاه تخصصی لوازم الکترونیکی است که با هدف ارائه محصولات اصل، باکیفیت و به‌روز راه‌اندازی شده است.
+                ما تلاش می‌کنیم تا تجربه‌ای ساده، سریع و لذت‌بخش از خرید آنلاین برای شما فراهم کنیم.
+              </p>
+              <p class="text-gray-600 leading-relaxed mb-4">
+                در ناب الکترونیک می‌توانید جدیدترین مدل‌های موبایل، لپ‌تاپ، هدفون، گجت‌های هوشمند و تجهیزات گیمینگ را از معتبرترین برندهای دنیا
+                با گارانتی معتبر و پشتیبانی تخصصی تهیه کنید.
+              </p>
+              <p class="text-gray-600 leading-relaxed mb-4">
+                تیم پشتیبانی ما آماده است تا در تمامی مراحل خرید، از انتخاب محصول تا دریافت سفارش، همراه شما باشد.
+                هدف ما جلب رضایت شما و تبدیل ناب الکترونیک به انتخاب اول‌تان برای خرید لوازم الکترونیکی است.
+              </p>
+              <div class="mt-6 border-t border-gray-100 pt-4 text-sm text-gray-500">
+                <p>آدرس: تهران، خیابان جمهوری</p>
+                <p class="mt-1">پشتیبانی تلفنی: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+                <p class="mt-1">ساعت پاسخ‌گویی: همه روزه ۹ صبح تا ۹ شب</p>
+              </div>
+              <button onclick="app.goHome()" class="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-bold transition">
+                بازگشت به صفحه اصلی
+              </button>
+            </div>
+          </div>
+        `;
+        document.getElementById('app-root').innerHTML = html;
+      }
+    };
+
+    app.init();
+  </script>
 
 </body>
+
 </html>
